@@ -1,0 +1,95 @@
+REPONSES
+
+-------- Semaine 1 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+[Question P1.1] Comment représentez-vous ces vecteurs ? 
+                Comment sont-ils organisés : quels attributs ? 
+                                             quelles méthodes ? 
+                                             quels droits d'accès ?
+
+Représentation : nouvelle classe 
+
+Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimensions :  l'abscisse x, et l'ordonnée y tout les deux en double. 
+                             Nous avons choisi de créer deux attributs (x et y) au lieu de créer une structure Coordonnee composée de deux champs 
+                             x et y, par soucis de simplicité au niveau des méthodes (en particulier affiche() et compare()) . Il est possible que nous changions si 
+                             le programme ne devient pas assez lisible.
+                             
+                             - attributs donnés en privé - ainsi ils sont connus du programmeur mais ne peuvent être modifier "directement" par l'utilisateur, 
+                             cela assure une certaine sécurité et permet d'assurer le principe d'encapsulation, à noter cependant que le choix (cf méthodes) d'une 
+                             méthode publique qui initialise le vecteur affaiblit ce procesus. Dans cette mesure il sera préférable de modifier cette partie du code 
+                             et d'utiliser un constructeur afin d'éviter d'affaiblir le programme. C'est pourquoi nous avons créer en commentaire un constructeur,
+                             n'effectuant rien mais qui construit par défaut un vecteur nul.
+                             
+                             
+               méthodes  --> Une méthodes qui permet d'afficher les coordonnées du vecteur séparemment x et y.
+                             Une autre pour initialiser un vecteur qui remplace pour l'instant le constructeur. En effet, celle-ci permettant de modifier directement 
+                             les attributs, elle  brise le principe d'encapsulation. Mais c'est pour l'instant notre seul choix d'implémentation.
+                             Une dernière methode qui permet de renvoyer si deux vecteurs sont égaux en prenant un seul vecteur. Nous avons opter pour une fonction 
+                             qui renvoie un booléen permettant de faire cette vérification. Elle fait partie de la classe et n'est pas définie à l'exterieur. Autrement, 
+                             il faudrait rajouter une autre méthode get_ pour accéder aux attributs, ceux-ci étant en privé. Cela compliquerait le code et ne faciliterait 
+                             par la comparaison.
+                             Toutes les methodes sont publics pour permettre à l'utilisateur de les utiliser.
+                
+                
+-------- Semaine 2 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[Question P4.1] Avez-vous ajouté un constructeur de copie ? Pourquoi (justifiez votre choix) ?
+
+    constructeur de copie -->Oui. Suite à la création d'un constructeur par défault d'un vecteur nul, nous avons choisi de créer un constructeur par défaut de                     
+                             de copie. En effet, bien qu'il ne paraisse pas nécessaire, quand on supprime un constructeur par défaut par défaut, il est préférable
+                             de reconstruire les autres constructeurs par défaut pour assurer une meilleure sécurité et controle du programme. Nous avons cepandant 
+                             conscience qu'il n'est pas absolumment nécessaire pour l'instant.
+                             
+    
+[Question P4.2] Si l'on souhaitait ajouter un constructeur par coordonnées polaires (un angle et une longueur),
+              a] que cela impliquerait-il au niveau des attributs de la classe ?
+              b] quelle serait la difficulté majeure (voire l'impossibilité) de sa réalisation en C++ ? (C'est d'ailleurs pour cela qu'on ne vous demande pas de faire un tel constructeur !)
+              
+                        a]--> Cela n'impliquerait rien, car comme en programmation orienté objet, on sépare l'implémentation de l'interface, les attributs de 
+                        classe resteraient inchangés.
+                        
+                        b]--> Définir un nouveau constructeur de Vecteur2D en coordonnées polaire serait difficile, premièrement parce qu'il initialiserait 
+                        le vecteur avec deux doubles (un pour l'angle, l'autre pour le module) de la même façon que le constructeur en coordonées cartésiennes. 
+                        Il serait difficile de conceptuellement séparer l'initialisation cartésienne et polaire. Ainsi, il faudrait changer la signature du nouveau
+                        constructeur (par exemple rajouter un paramètre inutile, offrir une factory...). Mais ce choix impliquerait une difficulté supplémentaire 
+                        de compréhension pour l'utilisateur.
+                     
+                        
+[Question P4.3] Quels opérateurs avez vous introduits ?      
+                        
+                        Nous avons introduit des opérateurs internes : ==, +=, -=, *=, Op(pour opposé) qui ont besoin des attributs privés de la classe, 
+                        et donc ne peuvent être déclarés à l'exertieur de la classe. 
+                        L'opérateur << sert à afficher les vecteurs, et qui retourne un ofstream pour permettre d'enchainer plusieurs appel d'opérateurs << sur
+                        une même ligne. Les opérateurs arithmétiques +=, -=, *= sont externes ils doivent accéder aux parties internes. Mais nous avons également
+                        introduit des opérateurs +, ++, -, --, * définit en externes qui utilisent les opérateurs internes.
+                        
+
+-------- Semaine 3 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+[Question P6.1] A ce stade, quels sont les attributs, méthodes et constructeurs de votre classe ChampPotentiel ?
+                        
+                            Nous avons introduit comme attributs trois unsigned int pour représenter Nx, Ny, Nz (nombre positif de cube dans chacune des trois
+                        dimensions). Il est plus facile de les initialiser comme trois variables indépendantes que comme un tableau fixe de trois int
+                        (implémentation intitiale) car il est plus simple de manipuler ces grandeurs telle quelle. Nous avons ensuite introduit le pas (double).
+                        Enfin, nous avons choisi de modéliser le champs de potentiel par un triple vecteur de Potentiel. Cela permet facilement de modéliser les
+                        trois dimensions : pour une coordonées (x,y,z) il faut appeler le composant[x][y][z].
+                            Le constructeur de la classe initialise essentiellement les dimentions de la boîte. Enfin, nous avons choisi d'ajouter une méthode 
+                        permettant de vérifier si les potentiels (vecteurs) de Potentiel (classe) sont au bord de la boîte.
+                        
+                       
+                      
+                        
+
+
+-------- Semaine 4 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 5 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 6 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 7 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 9 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 10 ----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 11 ----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 12 ----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 13 ----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 14 ----------------------------------------------------------------------------------------------------------------------------------------------
