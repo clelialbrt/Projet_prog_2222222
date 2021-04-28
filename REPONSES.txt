@@ -1,6 +1,6 @@
 REPONSES
 
--------- Semaine 1 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 2 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 [Question P1.1] Comment représentez-vous ces vecteurs ? 
                 Comment sont-ils organisés : quels attributs ? 
@@ -31,7 +31,7 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
                              Toutes les methodes sont publics pour permettre à l'utilisateur de les utiliser.
                 
                 
--------- Semaine 2 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 3 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 
 [Question P4.1] Avez-vous ajouté un constructeur de copie ? Pourquoi (justifiez votre choix) ?
@@ -65,7 +65,7 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
                         introduit des opérateurs +, ++, -, --, * définit en externes qui utilisent les opérateurs internes.
                         
 
--------- Semaine 3 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 4 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 [Question P6.1] A ce stade, quels sont les attributs, méthodes et constructeurs de votre classe ChampPotentiel ?
                         
@@ -82,9 +82,12 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
                         
 
 
--------- Semaine 4 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 5 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 6 -----------------------------------------------------------------------------------------------------------------------------------------------
+[Question P6.1] A ce stade, quels sont les attributs, méthodes et constructeurs de votre classe ChampPotentiel ?
+
+
+-------- Semaine 7 -----------------------------------------------------------------------------------------------------------------------------------------------
 [Question P7.1] Dans votre conception, la méthode iteration() est-elle public, protected ou private ?
 [Question P7.2] Dans votre conception, comment/où est représenté le paramètre ε de l'équation (6) ?
 
@@ -93,7 +96,7 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
 [Question P8.2] Parmi les grandeurs citées ci-dessus, lesquelles représentez-vous sous forme d'attributs et lesquelles sous forme de méthodes ?
 
 
--------- Semaine 7 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
 [Question P9.1] En termes de POO, quelle est donc la nature de la méthode dessine_sur() ?
 
 [Question P9.2] Quelle est la bonne façon de le faire dans un cadre de programmation orientée-objet ?
@@ -102,9 +105,8 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
 
 [Question P9.4] Comment représentez vous la classe Systeme ? 
 Expliquez votre conception (attributs, interface, ...).
--------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 9 -----------------------------------------------------------------------------------------------------------------------------------------------
--------- Semaine 10 ----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 10 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 11 ----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 12 ----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 13 ----------------------------------------------------------------------------------------------------------------------------------------------
