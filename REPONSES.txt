@@ -83,7 +83,14 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
 [Question P7.1] Dans votre conception, la méthode iteration() est-elle public, protected ou private ?
 Justifiez votre réponse.
 
+                        La méthode itération s'utilise de manière intermédiaire dans le programme, c'est-à-dire qu'elle n'est utile que pour l'autre méthode
+                        calcule_laplacien(). Cette dernière étant utiliser ouvertement par l'utilisateur elle doit être publique. En revanche, la méthode
+                        iteration() n'est pas appelée explicitemment par l'utilisateur. Aussi n'est-elle pas utile pour une autre classe, donc il n'est pas
+                        néessaire qu'elle soit protected  Ainsi, pour garantir une bonne encapsulation, nous avons choisi de la mettre en private.
+
 [Question P7.2] Dans votre conception, comment/où est représenté le paramètre ε de l'équation (6) ?
+
+                       Le paramètre ε est passé en paramètre dans la méthode iteration() avec comme valeur par défaut 0.1.
 
 [Question P8.1] Que vous inspire le paragraphe précédent ? Cela introduit-il d'autres classes ? Cela modifie-t-il votre conception précédente ? Si oui, comment et pourquoi ?
 
