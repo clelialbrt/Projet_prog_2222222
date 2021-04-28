@@ -31,8 +31,9 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
                              Toutes les methodes sont publics pour permettre à l'utilisateur de les utiliser.
                 
                 
--------- Semaine 3 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 3 -----------------------------------------------------------------------------------------------------------------------------------------------                     
 
+-------- Semaine 4 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 [Question P4.1] Avez-vous ajouté un constructeur de copie ? Pourquoi (justifiez votre choix) ?
 
@@ -63,9 +64,9 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
                         L'opérateur << sert à afficher les vecteurs, et qui retourne un ofstream pour permettre d'enchainer plusieurs appel d'opérateurs << sur
                         une même ligne. Les opérateurs arithmétiques +=, -=, *= sont externes ils doivent accéder aux parties internes. Mais nous avons également
                         introduit des opérateurs +, ++, -, --, * définit en externes qui utilisent les opérateurs internes.
-                        
-
--------- Semaine 4 -----------------------------------------------------------------------------------------------------------------------------------------------
+                                              
+                                                              
+-------- Semaine 5 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 [Question P6.1] A ce stade, quels sont les attributs, méthodes et constructeurs de votre classe ChampPotentiel ?
                         
@@ -75,20 +76,13 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
                         Enfin, nous avons choisi de modéliser le champs de potentiel par un triple vecteur de Potentiel. Cela permet facilement de modéliser les
                         trois dimensions : pour une coordonées (x,y,z) il faut appeler le composant[x][y][z].
                             Le constructeur de la classe initialise essentiellement les dimentions de la boîte. Enfin, nous avons choisi d'ajouter une méthode 
-                        permettant de vérifier si les potentiels (vecteurs) de Potentiel (classe) sont au bord de la boîte.
+                        permettant de vérifier si les potentiels (vecteurs) de Potentiel (classe) sont aux bords de la boîte.
                         
-                       
-                      
-                        
-
-
--------- Semaine 5 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 6 -----------------------------------------------------------------------------------------------------------------------------------------------
-[Question P6.1] A ce stade, quels sont les attributs, méthodes et constructeurs de votre classe ChampPotentiel ?
 
-
--------- Semaine 7 -----------------------------------------------------------------------------------------------------------------------------------------------
 [Question P7.1] Dans votre conception, la méthode iteration() est-elle public, protected ou private ?
+Justifiez votre réponse.
+
 [Question P7.2] Dans votre conception, comment/où est représenté le paramètre ε de l'équation (6) ?
 
 [Question P8.1] Que vous inspire le paragraphe précédent ? Cela introduit-il d'autres classes ? Cela modifie-t-il votre conception précédente ? Si oui, comment et pourquoi ?
@@ -96,7 +90,8 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
 [Question P8.2] Parmi les grandeurs citées ci-dessus, lesquelles représentez-vous sous forme d'attributs et lesquelles sous forme de méthodes ?
 
 
--------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
+-------- Semaine 7 -----------------------------------------------------------------------------------------------------------------------------------------------
+
 [Question P9.1] En termes de POO, quelle est donc la nature de la méthode dessine_sur() ?
 
 [Question P9.2] Quelle est la bonne façon de le faire dans un cadre de programmation orientée-objet ?
@@ -105,6 +100,9 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
 
 [Question P9.4] Comment représentez vous la classe Systeme ? 
 Expliquez votre conception (attributs, interface, ...).
+
+-------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
+
 -------- Semaine 9 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 10 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 11 ----------------------------------------------------------------------------------------------------------------------------------------------
