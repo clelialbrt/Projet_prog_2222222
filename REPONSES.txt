@@ -85,7 +85,23 @@ Organisation : attributs --> Coordonnées du vecteurs choisies en deux dimension
 -------- Semaine 4 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 5 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 6 -----------------------------------------------------------------------------------------------------------------------------------------------
+[Question P7.1] Dans votre conception, la méthode iteration() est-elle public, protected ou private ?
+[Question P7.2] Dans votre conception, comment/où est représenté le paramètre ε de l'équation (6) ?
+
+[Question P8.1] Que vous inspire le paragraphe précédent ? Cela introduit-il d'autres classes ? Cela modifie-t-il votre conception précédente ? Si oui, comment et pourquoi ?
+
+[Question P8.2] Parmi les grandeurs citées ci-dessus, lesquelles représentez-vous sous forme d'attributs et lesquelles sous forme de méthodes ?
+
+
 -------- Semaine 7 -----------------------------------------------------------------------------------------------------------------------------------------------
+[Question P9.1] En termes de POO, quelle est donc la nature de la méthode dessine_sur() ?
+
+[Question P9.2] Quelle est la bonne façon de le faire dans un cadre de programmation orientée-objet ?
+
+[Question P9.3] A quoi faut-il faire attention pour les classes contenant des pointeurs ? Quelles solutions peut-on envisager ?
+
+[Question P9.4] Comment représentez vous la classe Systeme ? 
+Expliquez votre conception (attributs, interface, ...).
 -------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 9 -----------------------------------------------------------------------------------------------------------------------------------------------
 -------- Semaine 10 ----------------------------------------------------------------------------------------------------------------------------------------------
