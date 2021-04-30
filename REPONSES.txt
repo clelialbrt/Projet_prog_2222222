@@ -103,10 +103,18 @@ Justifiez votre réponse.
 
 [Question P9.2] Quelle est la bonne façon de le faire dans un cadre de programmation orientée-objet ?
 
+                      On peut choisir de créer une collection de montagne grâce à un tableau vector.Mais cela a plusieurs inconvénients. Le premier étant de ne
+                      pas pouvoir avoir différents types de montagnes. Il est donc préférable 
+
 [Question P9.3] A quoi faut-il faire attention pour les classes contenant des pointeurs ? Quelles solutions peut-on envisager ?
+                      
+                      Il faut faire attention à la désallocation de mémoire. Lorsque que l'objet système est supprimé grâce au destructeur, si on ne fait rein, 
+                      les montagnes subsiste en mémoire et il n'y a plus aucun pointeur pour se « rappeler » son adresse. Il y aura fuite de mémoire. Pour éviter
+                      cela, il faut faire un delete des montagnes dans le destructeur de Systeme afin que qu'elles soient supprimées avant.
 
 [Question P9.4] Comment représentez vous la classe Systeme ? 
 Expliquez votre conception (attributs, interface, ...).
+
 
 -------- Semaine 8 -----------------------------------------------------------------------------------------------------------------------------------------------
 
