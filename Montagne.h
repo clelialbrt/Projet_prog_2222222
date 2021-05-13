@@ -2,8 +2,9 @@
 #include <iostream> 
 #include <cmath>
 #include <string>
+#include "Dessinable.h"
 
-class Montagne
+class Montagne : public Dessinable 
 {
 	
 	public: 
