@@ -1,4 +1,6 @@
 #prama once 
+#include "Boite3D.h"
+#include "CubeAir.h"
 
 class Ciel : public Boite3D
 {
