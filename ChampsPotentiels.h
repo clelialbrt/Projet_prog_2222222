@@ -1,6 +1,7 @@
 #pragma once 
 #include "Boite3D"
 #include "Vecteur2D"
+#include "Potentiel"
 
 
 class ChampsPotentiels : public Boite3D
