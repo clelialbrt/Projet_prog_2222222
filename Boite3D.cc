@@ -23,11 +23,5 @@ int Boite3D:: getNz()
 	return Nz;
 }
 
-int main ()
-  
- 
-{
-  
-  return 0;
-  
-}
+
+
