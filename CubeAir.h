@@ -1,7 +1,7 @@
 #pragma once
 #include "Boite3D.h"
 
-class CubedAir public : Boite3D
+class CubedAir
 {	
   public:
 	CubedAir(bool nuage) : etat(nuage) {}
