@@ -105,7 +105,4 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect)
 	return sortie;
 }
 
-int main()
-{
-	return 0;
-}
+
