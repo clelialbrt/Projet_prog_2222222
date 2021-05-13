@@ -3,8 +3,10 @@
 #include <vector>
 #include "Boite3D.h"
 #include "CubeAir.h"
+#include "Dessinable.h"
 
-class Ciel : public Boite3D
+class Ciel : public Boite3D Dessinable
+
 {
 	friend class CubedAir;
 	public:
