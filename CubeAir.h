@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "Boite3D.h"
 
 class CubedAir
