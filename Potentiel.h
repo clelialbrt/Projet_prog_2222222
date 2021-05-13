@@ -1,5 +1,6 @@
 #pragma once 
-#include "ChampsPotentiels"
+#include <iostream>
+#include "ChampsPotentiels.h"
 #include "Vecteur2D.h"
 
 class Potentiel
