@@ -23,7 +23,3 @@ void Montagne :: affiche_para()
 	
 	
 }
-int main()
-{
-	return 0;
-}
