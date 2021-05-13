@@ -1,4 +1,6 @@
 #prama once 
+#include <iostream>
+#include <vector>
 #include "Boite3D.h"
 #include "CubeAir.h"
 
