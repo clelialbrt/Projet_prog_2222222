@@ -11,7 +11,7 @@ virtual void dessine(Ciel const&);
 	
 private :
 
-ofstream& flot; 
+std :: ostream& flot; 
 
 	
 };
