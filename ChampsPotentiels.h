@@ -15,13 +15,13 @@ class ChampsPotentiels : public Boite3D
 
 	void initialise(double vi, const Montagne& mont);
 	
-	bool estauxbords(Potentiel pot);
+	bool estauxbords(Potentiel pot) const;
 	
 	void calcule_laplaciens();
 	double erreur();
 	void iteration( double E = 0.1);
 	void resolution ( double seuil = 2.2621843e-5, unsigned int max = 5000, bool verbeuse = false );
-	std::array<double, 3> vitesse( unsigned int i, unsigned int j, unsigned int k);
+	std::array<double, 3> vitesse( unsigned int i, unsigned int j, unsigned int k) const;
 	double norme_vitesse(unsigned int pointi, unsigned int pointj, unsigned int pointk);
 
 
