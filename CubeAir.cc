@@ -33,4 +33,8 @@ void CubedAir:: set_etat(unsigned int px, unsigned int py, unsigned int pz, Cham
 {
 	etat = (pression_partielle(px, py, pz, champo1) > pression_vapeur_saturante(px, py, pz, champo1));
 }
+bool CubedAir :: get_etat()
+{
+    return etat;
+}
 
