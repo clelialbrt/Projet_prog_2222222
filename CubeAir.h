@@ -18,6 +18,7 @@ class CubedAir
 	
 	//vu que l'enthalpie dépend de l'altitude est-ce qu'il serait pas mieux de la mettre en méthode du cube d'air comme ça on accède aussi aux coordonnees de la vitesse et tout le monde est content?
 	void set_etat(unsigned int px, unsigned int py, unsigned int pz, ChampsPotentiels champo1);
+	bool get_etat();
 	
 	private:
 	double enthalpie;
