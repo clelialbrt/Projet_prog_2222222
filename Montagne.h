@@ -12,6 +12,7 @@ class Montagne : public Dessinable
 	double altitude(double a, double b) const;
 	
 	void affiche_para();
+	virtual dessine_sur(SupportADessin a_dessiner) override ;
 	
 	// méthode pour afficher différents types de montagnes grâce à du polymorphisme
 	
