@@ -23,3 +23,8 @@ void Montagne :: affiche_para()
 	
 	
 }
+void Montagne ::  dessine_sur(SupportADessin a_dessiner) override 
+{
+	a_dessiner.dessine->this*;
+	
+}
