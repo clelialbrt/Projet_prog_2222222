@@ -7,10 +7,7 @@ class Dessinable //  permet de classer les objets qui sont dessinabletout les ob
 {
 	public :
 	
-	void dessine_sur() = 0;
-	virtual ~Dessinable() {}
+	void dessine_sur(SupportADessin& a_dessiner) = 0;
 	
-	protected :
 	
-	SupportADessin* A;
 };
