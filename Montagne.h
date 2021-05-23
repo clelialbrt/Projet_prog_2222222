@@ -13,6 +13,8 @@ class Montagne : public Dessinable
 	
 	void affiche_para();
 	
+	// méthode pour afficher différents types de montagnes grâce à du polymorphisme
+	
 	private:
 	double x0;
 	double y0;
