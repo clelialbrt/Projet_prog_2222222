@@ -2,5 +2,5 @@
 #include "Ciel.h"
 
 void Ciel :: dessine_sur(SupportADessin a_dessiner)
-{ a_dessiner.dessine->this*}
+{ a_dessiner.dessine(*this); }
 
