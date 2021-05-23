@@ -17,4 +17,6 @@ class Ciel : public Boite3D Dessinable
 	
 	private:
 	std::vector<std::vector<std::vector<CubedAir>>> cubes_dair;
+	
+	// constructeurs+ dessinesur+ affichage
 };
