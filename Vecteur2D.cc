@@ -1,107 +1,121 @@
 #include <iostream>
-#include <ostream>
 #include <cmath>
 #include "Vecteur2D.h"
 
 using namespace std;
 
-bool Vecteur2D:: operator==(Vecteur2D const& v) const
+//--------------------------------------------------------------OPERATEURS INTERNES-------------------------------------------------------------//
+
+
+bool Vecteur2D:: operator==(Vecteur2D const& V) const
 {
-	bool retour((coord_x == v.coord_x) && (coord_y == v.coord_y));
-	return retour;
+	return (coord_x == V.coord_x) && (coord_y == V.coord_y));
+	//return not((abs(coord_x - V.coord_x) > 10e-6) or (abs(coord_y - V.coord_y) > 10e-6) or (abs(coord_z - V.coord_z) > 10e-6));
 }
-    
-Vecteur2D& Vecteur2D:: operator+= ( Vecteur2D& V) // operateur interne +=
+
+// - opérateur interne - Retourne l'addition au vecteur du vecteur "V"   
+Vecteur2D& Vecteur2D:: operator += (Vecteur2D const& V) 
 {
     coord_x += V.coord_x;
     coord_y += V.coord_y;
                          
     return *this;
 }
-    
-Vecteur2D& Vecteur2D:: operator-= ( Vecteur2D& v2)  // operateur interne -=
+
+// - opérateur interne - Retourne la soustraction au vecteur du vecteur "V" 
+Vecteur2D& Vecteur2D:: operator -= (Vecteur2D const& V)  
 {
-    coord_x -= v2.coord_x;
-    coord_y -= v2.coord_y;
+    coord_x -= V.coord_x;
+    coord_y -= V.coord_y;
 
     return *this;
-}
-    
-    
-const Vecteur2D Vecteur2D:: operator-()  // opposé 
-{
-        
-     coord_x = -coord_x;
-     coord_y = -coord_y;
-        
-     return *this;
-        
-}
-    
-/*const Vecteur2D& Vecteur2D:: operator*=( double x)  // operateur interne *=
-{
-		
+}   
+ 
+// - opérateur interne - Retourne le vecteur multiplié par x
+const Vecteur2D& Vecteur2D:: operator *= (double const& x)  
+{		
      coord_x *= x;
-     coord_y *= x;
+     coord_y *= x;  
+     
+     return *this;    
+}
+
+// Retourne l'opposé du vecteur
+Vecteur2D Vecteur2D:: operator Op()  
+{       
+     coord_x = 0. - coord_x;
+     coord_y = 0. - coord_y;
         
-     return *this;
-    
-}*/
-    
-double Vecteur2D:: produit_scal( const Vecteur2D& autre)
-{
-	return (coord_x * autre.coord_y - coord_y * autre.coord_x);
+     return *this;        
 }
-    
-double Vecteur2D:: norme2()
-{
-    return (coord_x * coord_x + coord_y * coord_y);
-}
-    
-double Vecteur2D:: norme()
-{
-    return sqrt( norme2()); 
-}
-    
+
+// - opérateur interne - Retourne le vecteur unitaire associé à la direction du vecteur initial
 Vecteur2D& Vecteur2D:: operator~()
 {
         
-    coord_x /= norme();
-    coord_y /= norme();
+    coord_x = 1.0 / norme(); // assure une division de double
+    coord_y = 1.0 / norme();
 
     return *this ;
 }
     
-/*Vecteur2D Vecteur2D:: unitaire()
+//--------------------------------------------------------------METHODES-------------------------------------------------------------//
+
+
+//Retourne le produit scalaire du vecteur appelé et de "V"
+double Vecteur2D:: produit_scal( Vecteur2D const& V) const
+{
+	return (coord_x * V.coord_y + coord_y * V.coord_x);
+}
+
+//Retourne la norme du vecteur au carré
+double Vecteur2D:: norme2() const
+{
+    return (coord_x * coord_x + coord_y * coord_y);
+}
+
+//Retourne la norme du vecteur 
+double Vecteur2D:: norme() const
+{ 
+    return sqrt(norme2()); 
+}
+    
+
+/*Vecteur2D Vecteur2D:: unitaire() const
 {
     Vecteur2D unitaire;
     unitaire.set_coord( coord_x / norme(), coord_y/ norme());
     return unitaire;
 }*/
-	
-//--------------------------------------------------------------EXTERNE-------------------------------------------------------------//
+
+
+//--------------------------------------------------------------OPERATEURS EXTERNES-------------------------------------------------------------//
 
 
 
-		
-Vecteur2D& operator + ( Vecteur2D v1,  const Vecteur2D& v2)  // operateur externe +
+Vecteur2D& operator + ( Vecteur2D v1, const Vecteur2D& v2) // operateur externe +
 {
 	return v1 += v2;
 }
 		
-Vecteur2D& operator - ( Vecteur2D v1, const Vecteur2D& v2)  // operateur externe -
+Vecteur2D& operator - ( Vecteur2D v1, const Vecteur2D& v2) // operateur externe -
 {
 	return v1 -= v2;
 }
 		
-Vecteur2D& operator * ( double x, const Vecteur2D& v1)  // operateur externe *
+Vecteur2D& operator * ( double x, Vecteur2D& V) // operateur externe *
 {
-	return v1 *= x;
+	return V *= x;
 }
 
-std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect)
+Vecteur2D& operator * ( Vecteur2D& V, double const& x) // assure commutativité de la multiplication par un scalaire
 {
-	sortie << vect.coord_x << " " << vect.coord_y;
+	return V *= x;
+}
+
+std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& V) // permet d'afficher un vecteur par surcharge de <<
+{
+	sortie << V.coord_x << " " << V.coord_y;
 	return sortie;
 }
 
