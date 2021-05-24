@@ -50,7 +50,7 @@ Vecteur2D Vecteur2D:: operator Op()
 }
 
 // - opérateur interne - Retourne le vecteur unitaire associé à la direction du vecteur initial
-Vecteur2D& Vecteur2D:: operator~()
+Vecteur2D& Vecteur2D:: operator ~ ()
 {
         
     coord_x = 1.0 / norme(); // assure une division de double
