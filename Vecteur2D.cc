@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "Vecteur2D.h"
+#include "Vecteur.h"
 
 using namespace std;
 
@@ -9,7 +9,7 @@ using namespace std;
 
 bool Vecteur2D:: operator == (Vecteur2D const& V) const
 {
-	return (coord_x == V.coord_x) && (coord_y == V.coord_y));
+	return ((coord_x == V.coord_x) && (coord_y == V.coord_y));
 	//return not((abs(coord_x - V.coord_x) > 10e-6) or (abs(coord_y - V.coord_y) > 10e-6) or (abs(coord_z - V.coord_z) > 10e-6));
 }
 
@@ -32,7 +32,7 @@ Vecteur2D& Vecteur2D:: operator -= (Vecteur2D const& V)
 }   
  
 // - opérateur interne - Retourne le vecteur multiplié par x
-const Vecteur2D& Vecteur2D:: operator *= (double const& x)  
+Vecteur2D& Vecteur2D:: operator *= (const double& x)  
 {		
      coord_x *= x;
      coord_y *= x;  
@@ -40,14 +40,6 @@ const Vecteur2D& Vecteur2D:: operator *= (double const& x)
      return *this;    
 }
 
-// Retourne l'opposé du vecteur
-Vecteur2D Vecteur2D:: operator Op ()  
-{       
-     coord_x = 0. - coord_x;
-     coord_y = 0. - coord_y;
-        
-     return *this;        
-}
 
 // - opérateur interne - Retourne le vecteur unitaire associé à la direction du vecteur initial
 Vecteur2D& Vecteur2D:: operator ~ ()
@@ -79,7 +71,14 @@ double Vecteur2D:: norme() const
 { 
     return sqrt(norme2()); 
 }
-    
+ 
+// Retourne l'opposé du vecteur
+Vecteur2D Vecteur2D :: Oppose () const 
+{       
+	   Vecteur2D V(- coord_x, - coord_y);
+       return V;
+          
+}   
 
 /*Vecteur2D Vecteur2D:: unitaire() const
 {
@@ -118,5 +117,3 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& V) // permet d'a
 	sortie << V.coord_x << " " << V.coord_y;
 	return sortie;
 }
-
-
