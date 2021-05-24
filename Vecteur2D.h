@@ -47,17 +47,17 @@ class Vecteur2D
 	
     
     // Retourne l'opposé du vecteur
-    Vecteur2D operator Op();   
+    Vecteur2D operator Op ();   
 	
     // - opérateur interne - Retourne le vecteur unitaire associé à la direction du vecteur initial
-    Vecteur2D& operator ~();
+    Vecteur2D& operator ~ ();
 
 	
 //--------------------------------------------------------------METHODES-------------------------------------------------------------//
 
 	
     //Retourne le produit scalaire du vecteur appelé et de "V"
-    double produit_scal( Vecteur2D const& V) const;
+    double produit_scal(Vecteur2D const& V) const;
 	
 	
     //Retourne la norme du vecteur au carré
@@ -82,6 +82,6 @@ Vecteur2D& operator - (Vecteur2D v1, const Vecteur2D& v2);  // operateur externe
 		
 Vecteur2D& operator * (double const& x, Vecteur2D& V); // operateur externe *
 
-Vecteur2D& operator * ( Vecteur2D& V, double const& x); // assure commutativité de la multiplication par un scalaire
+Vecteur2D& operator * (Vecteur2D& V, double const& x); // assure commutativité de la multiplication par un scalaire
 
 std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& V); // permet d'afficher un vecteur par surcharge de <<
