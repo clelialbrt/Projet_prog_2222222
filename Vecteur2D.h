@@ -5,55 +5,83 @@
 
 class Vecteur2D
 {
-    friend std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect);
-    friend class ChampsPotentiels;
-    public:
+    protected:
+    double coord_x; // coordonnée x
+    double coord_y; // coordonnée y
+	
+    friend std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect); // ?
     
-    Vecteur2D (int x=0, int y=0) // constructeur par défaut au vecteur nul
+    // Permet à la classe ChampsPotentiels d'utiliser les attributs d'un vecteurs ... à voir
+    friend class ChampsPotentiels;
+	
+	
+    public:
+	
+   
+    // constructeur par défaut au vecteur nul	
+    Vecteur2D (int x=0, int y=0) 
     : coord_x(x), coord_y(y)
     {}
     
-    Vecteur2D( Vecteur2D const& autre) // constructeur de copie pour attributs en respect de la "règle d'or" 
+   /* Vecteur2D( Vecteur2D const& autre) /// le constructeur de copie par défaut par défaut suffit amplement
     :coord_x( autre.coord_x), coord_y(autre.coord_y)
-    {}
-    
-    bool operator==(Vecteur2D const& v) const;
+    {}*/
+	
+//--------------------------------------------------------------OPERATEURS INTERNES-------------------------------------------------------------//
 
-    Vecteur2D& operator+= ( Vecteur2D& V); // operateur interne +=
     
-    Vecteur2D& operator-= ( Vecteur2D& v2); // operateur interne -=    
+    //Retourne false si au moins l'une des cordonnées de vector n'est pas égale à celle du vecteur comparé (à la précision près)	
+    bool operator == (Vecteur2D const& V) const;
+
+	
+    // - opérateur interne - Retourne l'addition au vecteur du vecteur "V" 
+    Vecteur2D& operator += (Vecteur2D& V); 
+	
     
-    const Vecteur2D operator-();  // opposé 
+    // - opérateur interne - Retourne la soustraction au vecteur du vecteur "V" 
+    Vecteur2D& operator -= (Vecteur2D& V);  
+	
+        
+    // - opérateur interne - Retourne le vecteur multiplié par x
+    Vecteur2D& operator *= (double const& x);  
+	
     
-    /*const Vecteur2D& operator*=( double x);  // operateur interne *=*/
-    
-    double produit_scal( const Vecteur2D& autre);
-    
-    double norme2();
-    
-    double norme();
-    
-    Vecteur2D& operator~();
-    
-    //Vecteur2D unitaire();
-    
-    protected:
-    double coord_x;
-    double coord_y;
+    // Retourne l'opposé du vecteur
+    Vecteur2D operator Op();   
+	
+    // - opérateur interne - Retourne le vecteur unitaire associé à la direction du vecteur initial
+    Vecteur2D& operator ~();
+
+	
+//--------------------------------------------------------------METHODES-------------------------------------------------------------//
+
+	
+    //Retourne le produit scalaire du vecteur appelé et de "V"
+    double produit_scal( Vecteur2D const& V) const;
+	
+	
+    //Retourne la norme du vecteur au carré
+    double norme2() const;
+	
+	
+    //Retourne la norme du vecteur
+    double norme() const;
+	
+    /*// Vecteur unitaire   
+    Vecteur2D unitaire() const;*/ 
     
 };
 
-//--------------------------------------------------------------EXTERNE-------------------------------------------------------------//
+//--------------------------------------------------------------OPERATEURS EXTERNES-------------------------------------------------------------//
 
 
-/*Vecteur2D& operator ++ ( Vecteur2D v);  // operateur externe ++
-
-Vecteur2D& operator -- (  Vecteur2D v);  // operateur externe --*/
 		
-Vecteur2D& operator + ( Vecteur2D v1, const Vecteur2D& v2);  // operateur externe +
+Vecteur2D& operator + (Vecteur2D v1, const Vecteur2D& v2);  // operateur externe +
 		
-Vecteur2D& operator - ( Vecteur2D v1, const Vecteur2D& v2);  // operateur externe -
+Vecteur2D& operator - (Vecteur2D v1, const Vecteur2D& v2);  // operateur externe -
 		
-/*Vecteur2D& operator * ( double x,const Vecteur2D& v1 );  // operateur externe */
+Vecteur2D& operator * (double const& x, Vecteur2D& V); // operateur externe *
 
-std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect);
+Vecteur2D& operator * ( Vecteur2D& V, double const& x); // assure commutativité de la multiplication par un scalaire
+
+std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& V); // permet d'afficher un vecteur par surcharge de <<
