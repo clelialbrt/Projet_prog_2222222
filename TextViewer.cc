@@ -1,5 +1,5 @@
 # include <iostream>
-# include "SupportADessin"
+# include "SupportADessin.h"
 
 
 void TextViewer :: dessine(Systeme const& a_dessiner)
