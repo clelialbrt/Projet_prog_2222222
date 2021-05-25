@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <ostream>
-#include <cmath>
+#include <cmath> 
 
 class Vecteur2D
 {
