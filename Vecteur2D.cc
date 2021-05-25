@@ -75,14 +75,21 @@ double Vecteur2D:: norme() const
 // Retourne l'opposé du vecteur
 Vecteur2D Vecteur2D :: oppose () const
 {       
-	   Vecteur2D V(- coord_x, - coord_y);
+	   Vecteur2D V(0.- coord_x, 0.- coord_y);
        return V;
           
 }   
 
-//
-get
-
+// getteurs - permet d'accéder aux attributs privés
+double Vecteur2D :: get_x() const
+{
+	    return coord_x;
+}
+	    
+double Vecteur2D :: get_y() const
+{
+	    return coord_y;
+}
     
 
 //--------------------------------------------------------------OPERATEURS EXTERNES-------------------------------------------------------------//
@@ -111,6 +118,6 @@ Vecteur2D& operator * (Vecteur2D& V, double const& x) // assure commutativité d
 
 std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& V) // permet d'afficher un vecteur par surcharge de <<
 {
-	sortie << V.coord_x << " " << V.coord_y;
+	sortie << V.get_x << " " << V.get_y;
 	return sortie;
 }
