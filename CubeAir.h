@@ -1,10 +1,14 @@
 #pragma once
 #include <iostream>
 #include "Boite3D.h"
+#include "ChampsPotentiels.h"
+#include "constantes.h"
+#include "Ciel.h"
 
 class CubedAir
 {	
-  public:
+	friend class Ciel;
+	public:
 	CubedAir(bool nuage) : etat(nuage) {}
 	
 	//coordonnees de la vitesse du vent -> méthode ou attribut? voir complément mathématique, est-ce que c'est la méthode vitesse qui nous donne ces valeurs? si oui alors attribut
@@ -19,9 +23,12 @@ class CubedAir
 	//vu que l'enthalpie dépend de l'altitude est-ce qu'il serait pas mieux de la mettre en méthode du cube d'air comme ça on accède aussi aux coordonnees de la vitesse et tout le monde est content?
 	void set_etat(unsigned int px, unsigned int py, unsigned int pz, ChampsPotentiels champo1);
 	bool get_etat();
+	void set_vitesse(double coordx, double coordy, double coordz);
 	
 	private:
 	double enthalpie;
 	double temperature;
+	protected:
 	bool etat;
+	std::array<double, 3> vitesse_cubedair;
 };
