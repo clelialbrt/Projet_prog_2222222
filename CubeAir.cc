@@ -1,5 +1,8 @@
 #include <iostream>
-#include "CubeAir.h"
+#include "CubedAir.h"
+#include "constantes.h"
+
+using namespace Physique;
 
 void CubedAir:: set_enthalpie(unsigned int pointx, unsigned int pointy, unsigned int pointz, ChampsPotentiels champo)
 {
@@ -36,5 +39,12 @@ void CubedAir:: set_etat(unsigned int px, unsigned int py, unsigned int pz, Cham
 bool CubedAir :: get_etat()
 {
     return etat;
+}
+
+void CubedAir:: set_vitesse(double coordx, double coordy, double coordz)
+{
+	vitesse_cubedair[0] = coordx;
+	vitesse_cubedair[1] = coordy;
+	vitesse_cubedair[2] = coordz;
 }
 
