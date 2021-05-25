@@ -3,25 +3,26 @@
 
 using namespace std;
 
-double Boite3D:: getpas()
+double Boite3D:: getpas() const
 {
 	return pas;
 }
 
-int Boite3D:: getNx()
+int Boite3D:: getNx() const
 {
 	return Nx;
 }
 
-int Boite3D:: getNy()
+int Boite3D:: getNy() const
 { 
 	return Ny;
 } 
 
-int Boite3D:: getNz()
+int Boite3D:: getNz() const
 {
 	return Nz;
 }
+
 
 
 
