@@ -1,18 +1,9 @@
-#pragma once 
 #include <iostream>
-#include "ChampsPotentiels.h"
-#include "Vecteur2D.h"
+#include <vector>
+#include "Potentiel.h"
 
-class Potentiel
+void Potentiel:: affiche()
 {
-	friend class ChampsPotentiels;
-	public:
-	Potentiel() : poten(), laplacien() {}
-	void affiche();
+	cout << poten << endl; // on aurait echange les calculs du potentiel et du laplacien? ah non cest vrai qu'ils sont tous les deux faux :)
+}
 
-	protected:
-	Vecteur2D poten;
-	private:
-	Vecteur2D laplacien;
-
-};
