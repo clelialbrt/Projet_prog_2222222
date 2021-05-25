@@ -9,7 +9,6 @@ class Vecteur2D
     double coord_x; // coordonnée x
     double coord_y; // coordonnée y
 
-    friend std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect); 
     
     // Permet à la classe ChampsPotentiels d'utiliser les attributs d'un vecteurs ... à voir
     friend class ChampsPotentiels;
@@ -71,6 +70,7 @@ class Vecteur2D
 	
     // getteurs - permet d'accéder aux attributs privés
     double get_x() const;
+    double get_y() const;
 };
 
 //--------------------------------------------------------------OPERATEURS EXTERNES-------------------------------------------------------------//
