@@ -8,8 +8,8 @@ class Vecteur2D
     protected:
     double coord_x; // coordonnée x
     double coord_y; // coordonnée y
-	
-    friend std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect); // ?
+
+    friend std::ostream& operator<<(std::ostream& sortie, Vecteur2D const& vect); 
     
     // Permet à la classe ChampsPotentiels d'utiliser les attributs d'un vecteurs ... à voir
     friend class ChampsPotentiels;
@@ -45,9 +45,6 @@ class Vecteur2D
     // - opérateur interne - Retourne le vecteur multiplié par x
     Vecteur2D& operator *= (double const& x);  
 	
-    
-    // Retourne l'opposé du vecteur
-    Vecteur2D operator Op ();   
 	
     // - opérateur interne - Retourne le vecteur unitaire associé à la direction du vecteur initial
     Vecteur2D& operator ~ ();
@@ -66,10 +63,14 @@ class Vecteur2D
 	
     //Retourne la norme du vecteur
     double norme() const;
-	
-    /*// Vecteur unitaire   
-    Vecteur2D unitaire() const;*/ 
     
+       
+    // Retourne l'opposé du vecteur
+    Vecteur2D oppose () const; 
+	
+	
+    // getteurs - permet d'accéder aux attributs privés
+    double get_x() const;
 };
 
 //--------------------------------------------------------------OPERATEURS EXTERNES-------------------------------------------------------------//
