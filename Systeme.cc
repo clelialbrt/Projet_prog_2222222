@@ -2,8 +2,6 @@
 #include "Systeme.h"
 
 
-
-
 void Systeme :: affiche ()
 {
 	ptr_hill->affiche_para;
@@ -33,3 +31,4 @@ std::ostream& operator<<(std::ostream& sortie, Systeme const& Sys)
 {
 	Sys.affiche();
 }
+
