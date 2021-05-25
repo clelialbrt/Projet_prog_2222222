@@ -73,20 +73,17 @@ double Vecteur2D:: norme() const
 }
  
 // Retourne l'opposé du vecteur
-Vecteur2D Vecteur2D :: Oppose () const 
+Vecteur2D Vecteur2D :: oppose () const
 {       
 	   Vecteur2D V(- coord_x, - coord_y);
        return V;
           
 }   
 
-/*Vecteur2D Vecteur2D:: unitaire() const
-{
-    Vecteur2D unitaire;
-    unitaire.set_coord( coord_x / norme(), coord_y/ norme());
-    return unitaire;
-}*/
+//
+get
 
+    
 
 //--------------------------------------------------------------OPERATEURS EXTERNES-------------------------------------------------------------//
 
