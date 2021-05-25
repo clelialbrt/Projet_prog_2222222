@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include "Montagne.h"
+#include "Systeme.h"
+#include "Ciel.h"
 
 class SupportADessin 
 {
