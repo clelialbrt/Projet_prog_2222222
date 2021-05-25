@@ -1,10 +1,13 @@
-#pragma once 
+#pragma once
 #include <iostream>
-#include <array>
 #include <vector>
-#include "Boite3D"
-#include "Vecteur2D"
-#include "Potentiel"
+#include <array>
+#include "Vecteur2D.h"
+#include "constantes.h"
+#include "Boite3D.h"
+#include "Potentiel.h"
+#include "Montagne.h"
+
 
 
 class ChampsPotentiels : public Boite3D
@@ -20,14 +23,17 @@ class ChampsPotentiels : public Boite3D
 	void calcule_laplaciens();
 	double erreur();
 	void iteration( double E = 0.1);
-	void resolution ( double seuil = 2.2621843e-5, unsigned int max = 5000, bool verbeuse = false );
-	std::array<double, 3> vitesse( unsigned int i, unsigned int j, unsigned int k) const;
+	void resolution ( double seuil = 2.2621843e-5, unsigned int max = 5000, bool verbeuse = false);
+	std::array<double, 3> vitesse(unsigned int i, unsigned int j, unsigned int k) const;
 	double norme_vitesse(unsigned int pointi, unsigned int pointj, unsigned int pointk);
 
 
 	std::vector<std::vector<std::vector<Potentiel>>> get_tableaudepotentiels();
+	
+	//void remettre(Montagne m);
 		
 	private:
 	std::vector<std::vector<std::vector<Potentiel>>> potentiels3D;
 	 
 };
+
