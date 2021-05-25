@@ -2,8 +2,9 @@
 
 //Fichier contenant toutes les constantes physiques qui sont nécessaires dans certaines classes
 
-	extern const double Physique::g(9.81);                                // accélération gravitationnelle
-	extern const double Physique::Tinfini(284.5);                         // Vitesse du vent au bord (utilisée à l'initialisation)
+	extern const double Physique::g(9.81);                                // Accélération gravitationnelle
+	extern const double Physique::vinfini(15);			      // Vitesse du vemt au bord (utilisée à l'initialisation)
+	extern const double Physique::Tinfini(284.5);                         // Température au bord 
 	extern const double Physique::Pinfini(101325);                        // Pression de l'air au bord
 	extern const double Physique::Pref(101325);                           // Pression de référence
 	extern const double Physique::tau(8.10e-3);                           // taux d'humidité
