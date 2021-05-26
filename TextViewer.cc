@@ -1,5 +1,5 @@
 # include <iostream>
-# include "SupportADessin"
+# include "SupportADessin.h"
 
 
 void TextViewer :: dessine(Systeme const& a_dessiner)
@@ -15,6 +15,3 @@ void TextViewer :: dessine(Montagne const& a_dessiner)
 void TextViewer :: dessine(Ciel const& a_dessiner)
 {
 }
-	
-	
-
