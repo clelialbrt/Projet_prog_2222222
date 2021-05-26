@@ -1,9 +1,12 @@
 #pragma once
 #include <iostream>
+#include "Montagne.h"
+#include "Systeme.h"
+#include "Ciel.h"
 
 class SupportADessin 
 {
-	public:
+public:
 	
 virtual ~SupportADessin() = default;
 // on suppose ici que les supports ne seront ni copiés ni déplacés
