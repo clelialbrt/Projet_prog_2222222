@@ -5,7 +5,7 @@
 
 class Potentiel
 {
-	friend class ChampsPotentiels;
+	friend class ChampsPotentiels; //essayer de limiter les friend au maximum
 	public:
 	Potentiel() : poten(), laplacien() {}
 	void affiche();
