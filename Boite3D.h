@@ -10,6 +10,7 @@ class Boite3D
 	int getNy() const;
 	int getNz() const;
 	double getpas() const;
+	virtual void affiche(double x, double y, double z);
 	
 	protected:
 	unsigned int Nx;
