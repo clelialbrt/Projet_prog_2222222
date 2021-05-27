@@ -22,3 +22,9 @@ int Boite3D:: getNz() const
 {
 	return Nz;
 }
+
+void Boite3D:: affiche(double x, double y, double z)
+{
+	cout << x << " " << y << " " << z << " " << Nx << " " << Ny << " " << Nz << " " << pas << endl;
+}
+
