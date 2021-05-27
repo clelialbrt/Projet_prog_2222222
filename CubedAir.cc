@@ -47,3 +47,9 @@ void CubedAir:: set_vitesse(double coordx, double coordy, double coordz)
 	vitesse_cubedair[1] = coordy;
 	vitesse_cubedair[2] = coordz;
 }
+
+void CubedAir:: affiche(double x, double y, double z)
+{
+	cout << temperature << " " << enthalpie << " " << vitesse_cubedair[0] << " "  << pression(x, y, z) << " " << pression_partielle(x, y, z) << " " << pression_vapeur_saturante(x, y, z) << " " << etat << endl;
+}
+	
