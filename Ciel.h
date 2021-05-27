@@ -41,6 +41,7 @@ class Ciel : public Boite3D, public Dessinable
 	
 	CubedAir precedente(double pas_temps, double x, double y, double z);
 	virtual void dessine_sur(SupportADessin a_dessiner);
+	void affiche(double x, double y, double z);
 	
 	private:
 	std::vector<std::vector<std::vector<CubedAir>>> cubes_dair;
