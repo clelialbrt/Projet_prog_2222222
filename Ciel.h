@@ -11,13 +11,13 @@ class Ciel : public Boite3D, public Dessinable
 {
 	friend class CubedAir;
 	public:
-	Ciel(const ChampsPotentiels& champ) : Boite3D(champ.Nx, champ.Ny, champ.Nz, champ.pas) 
+	Ciel(const ChampsPotentiels& champ) : Boite3D(champ.getNx(), champ.getNy(), champ.getNz(), champ.getpas()) 
 	{
-		for (unsigned int i(0); i < champ.Nx; ++i)
+		for (unsigned int i(0); i < champ.getNx(); ++i)
 		{
-			for (unsigned int j(0); j < champ.Ny; ++j)
+			for (unsigned int j(0); j < champ.getNy(); ++j)
 			{
-				for (unsigned int k(0); k < champ.Nz; ++k)
+				for (unsigned int k(0); k < champ.getNz(); ++k)
 				{
 					cubes_dair[i][j][k].set_vitesse(champ.vitesse(i, j, k)[0], champ.vitesse(i, j, k)[1], champ.vitesse(i, j, k)[2]);
 				}
