@@ -24,6 +24,7 @@ class CubedAir
 	void set_etat(unsigned int px, unsigned int py, unsigned int pz, ChampsPotentiels champo1);
 	bool get_etat();
 	void set_vitesse(double coordx, double coordy, double coordz);
+	void affiche(double x, double y, double z);
 	
 	private:
 	double enthalpie;
