@@ -197,6 +197,13 @@ void ChampsPotentiels:: initialise(double vi, Montagne const& mont)
 	}
 }
 
+void ChampsPotentiels:: affiche(double x, double y, double z)
+{
+	cout << x << " " << y << " " << z << " " << Nx << " " << Ny << " " << Nz << " " << pas << " ";
+	potentiels3D[x][y][z].affiche();
+	cout << endl;
+}
+
 
 
  //notre ciel etait censé etre initialise avec un champ potentiel par reference -> faire un attribut vitesse pour chaque cube d'air dans le constructeur?
